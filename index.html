@@ -3,65 +3,306 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Call Me</title>
+  <title>Priyanka De | Portfolio</title>
 
   <style>
+    :root{
+      --bg:#07070b;
+      --card:#11111a;
+      --text:#ffffff;
+      --muted:#b8b8c6;
+      --accent:#ffb400;
+      --accent2:#00d1ff;
+      --line:#2a2a3a;
+    }
+
+    *{ box-sizing:border-box; }
     body{
       margin:0;
-      height:100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    .container{
+      width: min(1050px, 92%);
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    .hero{
+      display:flex;
+      gap: 30px;
+      align-items:center;
+      justify-content:space-between;
+      padding: 34px;
+      background: linear-gradient(180deg, #0c0c12, #09090e);
+      border:1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.55);
+    }
+
+    .hero-left{
+      flex:1;
+      min-width:260px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding: 7px 12px;
+      border:1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .title{
+      margin:0;
+      font-size: 40px;
+      line-height:1.1;
+      letter-spacing:0.2px;
+    }
+    .title span{
+      color: var(--accent);
+    }
+
+    .subtitle{
+      margin: 12px 0 18px 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height:1.6;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 14px 0 24px;
+    }
+    .chip{
+      padding: 8px 11px;
+      border-radius: 999px;
+      background:#0e0e15;
+      border:1px solid var(--line);
+      font-size: 13px;
+      color:#d8d8e6;
+    }
+
+    .buttons{
+      display:flex;
+      gap: 12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      transition: 0.2s;
+      border:1px solid transparent;
+    }
+    .btn-primary{
+      background: var(--accent);
+      color:#000;
+    }
+    .btn-primary:hover{
+      transform: translateY(-2px);
+      background:#ffc233;
+    }
+    .btn-outline{
+      background: transparent;
+      border:1px solid var(--line);
+      color:#fff;
+    }
+    .btn-outline:hover{
+      transform: translateY(-2px);
+      border-color:#3a3a55;
+    }
+
+    .hero-right{
+      width: 280px;
       display:flex;
       justify-content:center;
+    }
+
+    .photo-wrap{
+      width: 240px;
+      height: 240px;
+      border-radius: 24px;
+      overflow:hidden;
+      border: 2px solid #1f1f2f;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.65);
+      position: relative;
+    }
+
+    .photo-wrap::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(circle at top, rgba(255,180,0,0.18), transparent 60%);
+      pointer-events:none;
+    }
+
+    .photo{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* sections */
+    .section{
+      margin-top: 30px;
+      padding: 26px;
+      border-radius: 22px;
+      background: var(--card);
+      border:1px solid var(--line);
+    }
+
+    .section h2{
+      margin:0 0 14px;
+      font-size: 22px;
+      display:flex;
       align-items:center;
-      font-family: Arial, sans-serif;
-      background: #0b0b0f;
+      gap:10px;
     }
 
-    .card{
-      background:#151520;
-      padding:40px;
-      border-radius:18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      text-align:center;
-      width:300px;
+    .grid{
+      display:grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 20px;
     }
 
-    h1{
-      color:#fff;
-      margin-bottom:15px;
+    .summary p{
+      margin:0;
+      color: var(--muted);
+      line-height:1.7;
     }
 
-    p{
-      color:#bdbdbd;
-      margin-bottom:25px;
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
     }
 
-    a.call-btn{
-      display:inline-block;
-      background:#ffb400;
-      color:#000;
+    .link-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-weight:800;
       text-decoration:none;
-      padding:14px 24px;
-      border-radius:12px;
-      font-weight:bold;
-      font-size:16px;
-      transition:0.2s;
+      color:#000;
     }
 
-    a.call-btn:hover{
-      background:#ffc233;
-      transform: scale(1.03);
+    .green{ background:#25D366; }
+    .blue{ background:#0A66C2; color:#fff; }
+    .orange{ background:#FFB400; }
+    .dark{ background:#000; color:#fff; border:1px solid #2b2b2b; }
+
+    /* footer */
+    .footer{
+      margin-top:30px;
+      text-align:center;
+      color:var(--muted);
+      font-size: 13px;
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: 860px){
+      .hero{ flex-direction:column-reverse; text-align:center; }
+      .hero-right{ width:100%; }
+      .grid{ grid-template-columns: 1fr; }
+      .chips{ justify-content:center; }
+      .buttons{ justify-content:center; }
     }
   </style>
 </head>
+
 <body>
+  <div class="container">
 
-  <div class="card">
-    <h1>📞 Call Me</h1>
-    <p>Tap the button to call directly</p>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-left">
+        <div class="badge">Hi 👋 Welcome to my portfolio</div>
 
-    <!-- ✅ Replace number with your number -->
-    <a class="call-btn" href="tel:+919093805040">Call Now</a>
+        <h1 class="title">I'm <span>Priyanka De</span></h1>
+
+        <p class="subtitle">
+          Full Stack Data Analyst • SQL • Python • Excel • Power BI • AWS • Git • Linux • Storytelling
+        </p>
+
+        <div class="chips">
+          <div class="chip">Data Analytics</div>
+          <div class="chip">Data Engineering</div>
+          <div class="chip">Power BI Dashboards</div>
+          <div class="chip">ETL + Reporting</div>
+        </div>
+
+        <div class="buttons">
+
+          <!-- ✅ CALL ME BUTTON -->
+          <!-- Replace number with your real phone number -->
+          <a class="btn btn-primary" href="tel:+91XXXXXXXXXX">📞 CALL ME</a>
+
+          <!-- Optional buttons -->
+          <a class="btn btn-outline" href="#contact">Contact</a>
+          <a class="btn btn-outline" href="#about">About</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="photo-wrap">
+          <!-- ✅ Put your photo file in repo and name it: profile.png -->
+          <img class="photo" src="profile.png" alt="Priyanka Photo">
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section" id="about">
+      <h2>👩‍💻 About Me</h2>
+      <div class="grid">
+        <div class="summary">
+          <p>
+            I’m Priyanka De — a Full Stack Data Analyst passionate about converting raw data into business
+            insights using SQL, Python, Power BI, and Excel. I work on real-world sector-based projects like
+            Telecom, BFSI, Healthcare and Ecommerce with clear storytelling and KPI frameworks.
+          </p>
+        </div>
+
+        <div class="links" id="contact">
+          <!-- WhatsApp -->
+          <a class="link-btn green" href="https://wa.me/91XXXXXXXXXX" target="_blank">💚 WhatsApp</a>
+
+          <!-- Email -->
+          <a class="link-btn orange" href="mailto:yourmail@gmail.com">✉️ E-Mail</a>
+
+          <!-- GitHub -->
+          <a class="link-btn dark" href="https://github.com/data98priyanka" target="_blank">🐙 GitHub Repo</a>
+
+          <!-- LinkedIn -->
+          <a class="link-btn blue" href="https://www.linkedin.com/" target="_blank">in LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      ✨ Thank you for visiting ✨ <br>
+      Open to Full Stack Data Analyst roles | Projects | Networking
+    </div>
+
   </div>
-
 </body>
 </html>
