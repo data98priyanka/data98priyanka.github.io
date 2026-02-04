@@ -3,227 +3,298 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Priyanka De | Portfolio</title>
+  <title>Priyanka De | Full Stack Data Analyst</title>
 
   <style>
     :root{
       --bg:#07070b;
       --card:#11111a;
+      --card2:#0d0d14;
       --text:#ffffff;
       --muted:#b8b8c6;
       --accent:#ffb400;
-      --accent2:#00d1ff;
+      --blue:#2f80ed;
       --line:#2a2a3a;
     }
-
-    *{ box-sizing:border-box; }
+    *{box-sizing:border-box;}
     body{
       margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      background:var(--bg);
-      color:var(--text);
+      background: var(--bg);
+      color: var(--text);
     }
-
+    a{color:inherit;}
     .container{
-      width: min(1050px, 92%);
-      margin: 0 auto;
-      padding: 40px 0;
+      width:min(1120px, 92%);
+      margin:0 auto;
+      padding:34px 0 60px;
     }
 
-    .hero{
+    /* header */
+    header{
       display:flex;
-      gap: 30px;
       align-items:center;
       justify-content:space-between;
-      padding: 34px;
-      background: linear-gradient(180deg, #0c0c12, #09090e);
+      gap:18px;
+      padding:16px 20px;
       border:1px solid var(--line);
-      border-radius: 22px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.55);
+      background: rgba(17,17,26,0.9);
+      border-radius:18px;
+      position:sticky;
+      top:12px;
+      z-index:99;
+      backdrop-filter: blur(8px);
     }
-
-    .hero-left{
-      flex:1;
-      min-width:260px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
     }
+    .brand img{
+      width:44px;height:44px;
+      border-radius:14px;
+      object-fit:cover;
+      border:1px solid #1d1d2a;
+    }
+    .brand b{font-size:15px;}
+    .brand span{font-size:12px;color:var(--muted); display:block;}
+    nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      color:#dcdceb;
+      padding:9px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+    }
+    nav a:hover{border:1px solid var(--line); background:var(--card2);}
 
+    /* hero */
+    .hero{
+      margin-top:22px;
+      padding:30px;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, #0c0c12, #09090e);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      display:grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 24px;
+      align-items:center;
+    }
     .badge{
       display:inline-block;
-      padding: 7px 12px;
+      padding:7px 12px;
       border:1px solid var(--line);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 14px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+      margin-bottom:12px;
     }
-
-    .title{
+    .hero h1{
       margin:0;
-      font-size: 40px;
+      font-size:44px;
       line-height:1.1;
-      letter-spacing:0.2px;
     }
-    .title span{
-      color: var(--accent);
+    .hero h1 span{color:var(--accent);}
+    .typing{
+      margin-top:10px;
+      font-weight:800;
+      color: #dbe7ff;
     }
-
-    .subtitle{
-      margin: 12px 0 18px 0;
-      color: var(--muted);
-      font-size: 15px;
-      line-height:1.6;
+    .hero p{
+      color:var(--muted);
+      line-height:1.7;
+      margin:14px 0 0;
+      font-size:14.8px;
     }
-
     .chips{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin: 14px 0 24px;
+      margin-top:18px;
     }
     .chip{
-      padding: 8px 11px;
-      border-radius: 999px;
+      font-size:13px;
+      padding:8px 12px;
+      border-radius:999px;
       background:#0e0e15;
       border:1px solid var(--line);
-      font-size: 13px;
-      color:#d8d8e6;
+      color:#e7e7f8;
     }
-
-    .buttons{
+    .hero-btns{
       display:flex;
-      gap: 12px;
       flex-wrap:wrap;
-      align-items:center;
+      gap:12px;
+      margin-top:20px;
     }
     .btn{
+      text-decoration:none;
+      font-weight:900;
+      font-size:14px;
+      padding:12px 16px;
+      border-radius:14px;
       display:inline-flex;
+      gap:10px;
       align-items:center;
       justify-content:center;
-      gap:10px;
-      padding: 12px 16px;
-      border-radius: 14px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      transition: 0.2s;
       border:1px solid transparent;
+      transition:0.2s;
     }
     .btn-primary{
       background: var(--accent);
       color:#000;
     }
-    .btn-primary:hover{
-      transform: translateY(-2px);
-      background:#ffc233;
-    }
+    .btn-primary:hover{transform:translateY(-2px); background:#ffc233;}
     .btn-outline{
-      background: transparent;
       border:1px solid var(--line);
+      background:transparent;
       color:#fff;
     }
-    .btn-outline:hover{
-      transform: translateY(-2px);
-      border-color:#3a3a55;
-    }
-
-    .hero-right{
-      width: 280px;
-      display:flex;
-      justify-content:center;
-    }
-
-    .photo-wrap{
-      width: 240px;
-      height: 240px;
-      border-radius: 24px;
+    .btn-outline:hover{transform:translateY(-2px); background:#0d0d14;}
+    .photo{
+      width:100%;
+      max-width:270px;
+      margin-left:auto;
+      border-radius:24px;
       overflow:hidden;
       border: 2px solid #1f1f2f;
       box-shadow: 0 12px 30px rgba(0,0,0,0.65);
-      position: relative;
+      position:relative;
     }
-
-    .photo-wrap::after{
+    .photo:after{
       content:"";
       position:absolute;
       inset:0;
       background: radial-gradient(circle at top, rgba(255,180,0,0.18), transparent 60%);
       pointer-events:none;
     }
-
-    .photo{
+    .photo img{
       width:100%;
-      height:100%;
+      height:320px;
       object-fit:cover;
       display:block;
     }
 
     /* sections */
-    .section{
-      margin-top: 30px;
-      padding: 26px;
-      border-radius: 22px;
-      background: var(--card);
+    section{
+      margin-top:26px;
+      padding:26px;
+      border-radius:24px;
       border:1px solid var(--line);
+      background: var(--card);
     }
-
-    .section h2{
-      margin:0 0 14px;
-      font-size: 22px;
+    section h2{
+      margin:0 0 12px;
+      font-size:22px;
       display:flex;
       align-items:center;
       gap:10px;
     }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 20px;
-    }
-
-    .summary p{
-      margin:0;
+    .subtext{
+      margin: 0 0 20px;
       color: var(--muted);
-      line-height:1.7;
+      line-height:1.6;
+      font-size:14px;
     }
 
-    .links{
+    /* projects */
+    .roadmap{
+      border-radius:18px;
+      padding:18px;
+      border:1px solid #25253a;
+      background: linear-gradient(90deg, #141424, #0f0f18);
+      margin:14px 0 22px;
+    }
+    .roadmap img{
+      width:min(760px, 100%);
+      display:block;
+      margin: 0 auto 10px;
+    }
+    .roadmap p{
+      color:#dcdceb;
+      font-size:13.5px;
+      line-height:1.65;
+      margin:0;
+      text-align:center;
+    }
+    .project-grid{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
+    .proj{
+      background: var(--card2);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:10px;
+      text-decoration:none;
+      transition:0.2s;
+    }
+    .proj:hover{transform:translateY(-3px); border-color:#3b3b55;}
+    .proj img{
+      width:100%;
+      border-radius:14px;
+      display:block;
+    }
+
+    /* summary */
+    .two-col{
+      display:grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap:18px;
+      align-items:start;
+    }
+    ul{margin:8px 0 0; padding-left:18px; color:#dcdceb; line-height:1.7;}
+    .cta-box{
       display:flex;
       flex-direction:column;
       gap:10px;
-    }
-
-    .link-btn{
-      display:flex;
       align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      font-weight:800;
-      text-decoration:none;
-      color:#000;
+    }
+    .cta-box a img{
+      width:min(420px, 100%);
+      display:block;
     }
 
-    .green{ background:#25D366; }
-    .blue{ background:#0A66C2; color:#fff; }
-    .orange{ background:#FFB400; }
-    .dark{ background:#000; color:#fff; border:1px solid #2b2b2b; }
+    /* tech stack */
+    .tech-grid{
+      display:grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap:12px;
+    }
+    .tech{
+      text-align:center;
+      padding:12px 8px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background: var(--card2);
+    }
+    .tech img{width:48px; height:48px; object-fit:contain;}
+    .tech b{display:block; margin-top:8px; font-size:12px; color:#e8e8f6;}
 
     /* footer */
-    .footer{
-      margin-top:30px;
+    footer{
+      margin-top:28px;
       text-align:center;
       color:var(--muted);
-      font-size: 13px;
-      padding-bottom: 10px;
+      font-size:13px;
     }
 
-    @media (max-width: 860px){
-      .hero{ flex-direction:column-reverse; text-align:center; }
-      .hero-right{ width:100%; }
-      .grid{ grid-template-columns: 1fr; }
-      .chips{ justify-content:center; }
-      .buttons{ justify-content:center; }
+    /* responsive */
+    @media(max-width: 980px){
+      .hero, .two-col{grid-template-columns:1fr;}
+      .photo{max-width:300px; margin:0 auto;}
+      nav{display:none;}
+      .project-grid{grid-template-columns: repeat(2, 1fr);}
+      .tech-grid{grid-template-columns: repeat(4, 1fr);}
     }
   </style>
 </head>
@@ -231,78 +302,227 @@
 <body>
   <div class="container">
 
+    <!-- TOP NAV -->
+    <header>
+      <div class="brand">
+        <img src="profile.png" alt="Priyanka">
+        <div>
+          <b>Priyanka De</b>
+          <span>Full Stack Data Analyst</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#summary">Summary</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
     <!-- HERO -->
     <div class="hero">
-      <div class="hero-left">
-        <div class="badge">Hi 👋 Welcome to my portfolio</div>
+      <div>
+        <div class="badge">Hi 👋 I’m Priyanka De</div>
 
-        <h1 class="title">I'm <span>Priyanka De</span></h1>
+        <h1>Full Stack <span>Data Analyst</span></h1>
 
-        <p class="subtitle">
-          Full Stack Data Analyst • SQL • Python • Excel • Power BI • AWS • Git • Linux • Storytelling
+        <div class="typing">
+          SQL | Python | Power BI | AWS | Data Engineering | Storytelling
+        </div>
+
+        <p>
+          Full Stack Data Analyst skilled in <b>Data Engineering</b>, <b>Analytics</b>, and <b>Dashboard Storytelling</b> —
+          Transforming complex data into actionable insights and innovative solutions through advanced analytics and machine learning with
+          <b>realtime Business effectiveness</b>.
         </p>
 
         <div class="chips">
-          <div class="chip">Data Analytics</div>
-          <div class="chip">Data Engineering</div>
-          <div class="chip">Power BI Dashboards</div>
+          <div class="chip">KPI Dashboarding</div>
           <div class="chip">ETL + Reporting</div>
+          <div class="chip">AWS Pipelines</div>
+          <div class="chip">Power BI Storytelling</div>
         </div>
 
-        <div class="buttons">
+        <div class="hero-btns" id="contact">
+          <!-- ✅ REPLACE PHONE NUMBER -->
+          <a class="btn btn-primary" href="tel:+917063257272">📞 CALL ME</a>
 
-          <!-- ✅ CALL ME BUTTON -->
-          <!-- Replace number with your real phone number -->
-          <a class="btn btn-primary" href="tel:+91XXXXXXXXXX">📞 CALL ME</a>
+          <a class="btn btn-outline" href="https://wa.me/917063257272?text=Hi%20Priyanka%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect."
+             target="_blank">💚 WhatsApp</a>
 
-          <!-- Optional buttons -->
-          <a class="btn btn-outline" href="#contact">Contact</a>
-          <a class="btn btn-outline" href="#about">About</a>
+          <a class="btn btn-outline" href="mailto:pdecloud98@gmail.com,dataexplorepriyanka@gmail.com">✉️ Email</a>
         </div>
       </div>
 
-      <div class="hero-right">
-        <div class="photo-wrap">
-          <!-- ✅ Put your photo file in repo and name it: profile.png -->
-          <img class="photo" src="profile.png" alt="Priyanka Photo">
-        </div>
+      <div class="photo">
+        <img src="profile.png" alt="Priyanka Photo">
       </div>
     </div>
 
-    <!-- ABOUT -->
-    <div class="section" id="about">
-      <h2>👩‍💻 About Me</h2>
-      <div class="grid">
-        <div class="summary">
-          <p>
-            I’m Priyanka De — a Full Stack Data Analyst passionate about converting raw data into business
-            insights using SQL, Python, Power BI, and Excel. I work on real-world sector-based projects like
-            Telecom, BFSI, Healthcare and Ecommerce with clear storytelling and KPI frameworks.
+    <!-- GIFS (your 3 gifs) -->
+    <section>
+      <h2>✨ Highlights</h2>
+      <p class="subtext">Animated highlights of my data journey.</p>
+
+      <div class="project-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="proj"><img src="assets/21.gif" alt="gif1"></div>
+        <div class="proj"><img src="assets/22.gif" alt="gif2"></div>
+        <div class="proj"><img src="assets/23.gif" alt="gif3"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>📁 My Projects</h2>
+      <p class="subtext">
+        A collection of Real-world business projects focused on solving business problems using data-driven insights in various business sectors.
+      </p>
+
+      <div class="roadmap">
+        <img src="assets/project/roadmap.svg" alt="Roadmap">
+        <p>
+          <b>1.</b> Strategic Vision ➜
+          <b>2.</b> Project Overview ➜
+          <b>3.</b> Problem Statements ➜
+          <b>4.</b> Objectives ➜
+          <b>5.</b> Stakeholder Questions ➜
+          <b>6.</b> EDA + ETL ➜
+          <b>7.</b> Data Modelling ➜
+          <b>8.</b> Live Dashboard ➜
+          <b>9.</b> Insights ➜
+          <b>10.</b> Impact ➜
+          <b>11.</b> Challenges ➜
+          <b>12.</b> Enhancements ➜
+          <b>13.</b> Boardroom PPT
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <a class="proj" href="https://github.com/data98priyanka/Evereve-Product-Marketing-Analytics-Business-Growth-AWS-ETL-Automation-BI-Dashboard" target="_blank">
+          <img src="assets/project/EE.png" alt="FMCG">
+        </a>
+
+        <a class="proj" href="https://github.com/data98priyanka/Media--entertainment--sector" target="_blank">
+          <img src="assets/project/FF.png" alt="Media">
+        </a>
+
+        <a class="proj" href="https://github.com/data98priyanka/ecommerce--retail" target="_blank">
+          <img src="assets/project/CC.png" alt="Ecommerce">
+        </a>
+
+        <a class="proj" href="https://github.com/data98priyanka/telecom" target="_blank">
+          <img src="assets/project/tt.png" alt="Telecom">
+        </a>
+
+        <a class="proj" href="https://github.com/data98priyanka/Manufacturing--Supply--chain" target="_blank">
+          <img src="assets/project/mm.png" alt="Manufacturing">
+        </a>
+
+        <a class="proj" href="https://github.com/data98priyanka/BFSI--SECTOR" target="_blank">
+          <img src="assets/project/BB.png" alt="BFSI">
+        </a>
+
+        <a class="proj" href="https://github.com/data98priyanka/Healthcare--Pharma" target="_blank">
+          <img src="assets/project/HH.png" alt="Healthcare">
+        </a>
+
+        <a class="proj" href="https://github.com/data98priyanka/Mini-projects-on-Advanced-Skills" target="_blank">
+          <img src="assets/project/mini0.png" alt="Mini Projects">
+        </a>
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section id="summary">
+      <h2>💼 Professional Summary</h2>
+      <p class="subtext">Open to full-time positions and professional collaborations — Feel free to reach out.</p>
+
+      <div class="two-col">
+        <div>
+          <h3 style="margin:0 0 10px;">💡 What I Do (My Strengths)</h3>
+          <ul>
+            <li>Perform deep analysis & build business-ready dashboards (Power BI / Tableau) with KPI frameworks, drilldowns & storytelling</li>
+            <li>Design data pipelines — scraping → cleaning → validation → transformation → data modeling</li>
+            <li>Work with cloud & scalable tools — AWS + automation-friendly workflows</li>
+            <li>OS: Linux</li>
+            <li>Git + GitHub</li>
+          </ul>
+
+          <h3 style="margin:18px 0 10px;">🔥 What Makes Me Different</h3>
+          <ul>
+            <li>I don’t just “analyze data” — I convert messy datasets into decision systems</li>
+            <li>Comfortable with both analytics + engineering workflows, so I can own projects end-to-end</li>
+            <li>Learning: ML, Deep Learning, Data Science, Databricks</li>
+          </ul>
+
+          <p style="margin-top:14px; color:#dcdceb;">
+            🎯 Actively seeking: <b>Full Stack Data Analyst</b> | <b>Business Analyst</b> | <b>BI Analyst</b> roles
           </p>
         </div>
 
-        <div class="links" id="contact">
-          <!-- WhatsApp -->
-          <a class="link-btn green" href="https://wa.me/91XXXXXXXXXX" target="_blank">💚 WhatsApp</a>
+        <div class="cta-box">
+          <a href="https://drive.google.com/file/d/1LGYONumq3RA9mgQmn_6RQUhs9JtKXFsW/view" target="_blank">
+            <img src="assets/buttons/downloadcv.svg" alt="Download CV">
+          </a>
 
-          <!-- Email -->
-          <a class="link-btn orange" href="mailto:yourmail@gmail.com">✉️ E-Mail</a>
+          <a href="https://wa.me/917063257272?text=Hi%20Priyanka%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20connect." target="_blank">
+            <img src="assets/buttons/wapp.svg" alt="WhatsApp">
+          </a>
 
-          <!-- GitHub -->
-          <a class="link-btn dark" href="https://github.com/data98priyanka" target="_blank">🐙 GitHub Repo</a>
+          <a href="mailto:pdecloud98@gmail.com,dataexplorepriyanka@gmail.com">
+            <img src="assets/buttons/email.svg" alt="Email">
+          </a>
 
-          <!-- LinkedIn -->
-          <a class="link-btn blue" href="https://www.linkedin.com/" target="_blank">in LinkedIn</a>
+          <a href="https://github.com/data98priyanka?tab=repositories" target="_blank">
+            <img src="assets/buttons/git.svg" alt="GitHub Repo">
+          </a>
+
+          <a href="https://www.linkedin.com/in/priyanka-de-711555289/" target="_blank">
+            <img src="assets/buttons/linkedin.svg" alt="LinkedIn">
+          </a>
+
+          <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank">
+            <img src="assets/buttons/naukri.svg" alt="Naukri">
+          </a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- FOOTER -->
-    <div class="footer">
-      ✨ Thank you for visiting ✨ <br>
-      Open to Full Stack Data Analyst roles | Projects | Networking
-    </div>
+    <!-- TECH STACK -->
+    <section id="tech">
+      <h2>⚡ My Tech Stack</h2>
+      <p class="subtext">Tools I use in real-world analytics + engineering workflow.</p>
 
+      <div class="tech-grid">
+        <div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"><b>Python</b></div>
+        <div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg"><b>Pandas</b></div>
+        <div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg"><b>NumPy</b></div>
+        <div class="tech"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg"><b>SciPy</b></div>
+        <div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scikitlearn/scikitlearn-original.svg"><b>Scikit</b></div>
+        <div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"><b>Git</b></div>
+        <div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"><b>GitHub</b></div>
+        <div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"><b>Linux</b></div>
+      </div>
+    </section>
+
+    <!-- THANK YOU -->
+    <section>
+      <h2>✨ Thank You for Visiting ✨</h2>
+      <p class="subtext">Open to Full Stack Data Analyst roles | Projects | Networking</p>
+
+      <div class="project-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="proj"><img src="assets/24.gif" alt="gif4"></div>
+        <div class="proj"><img src="assets/25.gif" alt="gif5"></div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Priyanka De • Built with GitHub Pages
+    </footer>
   </div>
+
+  <script>
+    document.getElementById("y").innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
