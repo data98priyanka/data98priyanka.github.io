@@ -8,9 +8,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 
+
 <style>
 body{font-family:'Poppins',sans-serif;}
 
+/* SECTION TITLE */
+.section-title{
+display:inline-block;
+padding:12px 26px;
+margin:40px auto 18px;
+font-size:1.55rem;
+font-weight:700;
+text-align:center;
+border-radius:12px;
+background: linear-gradient(135deg,#5f2cff,#a855f7,#6366f1);
+color:white;
+box-shadow:0 4px 18px rgba(0,0,0,.35);
+}
+
+/* TILE */
 .tech-btn{
 background: rgba(20,20,35,0.85);
 border:1px solid rgba(255,255,255,0.25);
@@ -33,14 +49,9 @@ display:flex;align-items:center;justify-content:center
 }
 
 .logo-box{
-background:white;border-radius:10px;padding:6px
-}
-
-.section-title{
-font-size:1.6rem;
-font-weight:700;
-margin:28px 0 12px;
-text-align:center
+background:white;
+border-radius:10px;
+padding:6px
 }
 
 .grid{gap:14px !important;}
@@ -50,7 +61,7 @@ text-align:center
 <body class="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
 
 <h2 class="text-4xl font-bold text-center mt-10">My Tech Stack</h2>
-
+<br><br>
 <!-- Programming -->
 <div class="section-title">Programming Language</div>
 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 justify-items-center">
