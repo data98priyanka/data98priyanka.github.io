@@ -1,242 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priyanka Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Priyanka Daye | Full Stack Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 
 <style>
+body{font-family:'Poppins',sans-serif;}
 
-/* ===== GLOBAL ===== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(120deg,#eef2f7,#f9fbff);
-  color:#1f2933;
-  overflow-x:hidden;
-}
-
-/* ===== LAYOUT ===== */
-.container{
-  max-width:1250px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:300px 1fr;
-  gap:28px;
-  padding:40px 20px;
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar{
-  backdrop-filter: blur(16px);
-  background: rgba(255,255,255,0.6);
-  border-radius:18px;
-  padding:25px;
-  box-shadow:0 12px 28px rgba(0,0,0,0.08);
-  text-align:center;
-  animation: slideIn 0.8s ease;
-}
-
-.avatar{
-  width:170px;
-  height:170px;
-  border-radius:50%;
-  object-fit:cover;
-  margin-bottom:15px;
-  border:4px solid white;
-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
-}
-
-.name{
-  font-size:22px;
+/* SQUARE TILE */
+.tech-btn{
+  background: rgba(20,20,35,0.85);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:16px;
+  width:140px;
+  height:140px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
   font-weight:600;
-}
-
-.username{
-  color:#667;
-  margin-bottom:12px;
-}
-
-.bio{
-  font-size:14px;
-  line-height:1.6;
-  margin-bottom:16px;
-}
-
-.btn{
-  background: linear-gradient(135deg,#5f9cff,#7b61ff);
-  color:white;
-  border:none;
-  padding:10px 18px;
-  border-radius:10px;
-  cursor:pointer;
+  text-align:center;
   transition:0.3s;
 }
+.tech-btn:hover{transform:scale(1.12);background:rgba(60,40,120,0.9)}
 
-.btn:hover{
-  transform: translateY(-3px);
-  box-shadow:0 6px 14px rgba(0,0,0,0.2);
-}
-
-.info{
-  margin-top:18px;
-  text-align:left;
-  font-size:14px;
-  color:#555;
-}
-
-/* ===== CONTENT ===== */
-.content{
-  animation: fadeUp 1s ease;
-}
-
-/* HERO */
-.hero{
-  background: linear-gradient(120deg,#3a7bd5,#8ec5fc);
-  color:white;
-  border-radius:18px;
-  padding:35px;
-  box-shadow:0 12px 25px rgba(0,0,0,0.1);
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  width:200px;
-  height:200px;
-  background:rgba(255,255,255,0.15);
-  border-radius:50%;
-  top:-50px;
-  right:-50px;
-}
-
-.hero h1{
-  font-size:28px;
-  margin-bottom:8px;
-}
-
-.hero p{
-  opacity:0.9;
-}
-
-/* ===== SECTION ===== */
-.section{
-  margin-top:30px;
-}
-
-.section h2{
-  margin-bottom:12px;
-}
-
-/* ===== CARDS ===== */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:white;
-  border-radius:14px;
-  padding:15px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.06);
-  transition:0.35s;
-  cursor:pointer;
-}
-
-.card:hover{
-  transform: translateY(-8px) scale(1.02);
-  box-shadow:0 14px 30px rgba(0,0,0,0.15);
-}
-
-.card img{
-  width:100%;
-  border-radius:10px;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes slideIn{
-  from{transform:translateX(-40px); opacity:0;}
-  to{transform:translateX(0); opacity:1;}
-}
-
-@keyframes fadeUp{
-  from{transform:translateY(30px); opacity:0;}
-  to{transform:translateY(0); opacity:1;}
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-  .container{
-    grid-template-columns:1fr;
-  }
-}
-
+.logo-wrap{width:60px;height:60px;display:flex;align-items:center;justify-content:center}
+.logo-box{background:white;border-radius:10px;padding:6px}
+.section-title{font-size:1.6rem;font-weight:700;margin:40px 0 20px;text-align:center}
 </style>
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
 
-<div class="container">
+<!-- ================= TECH STACK ================= -->
+<h2 class="text-4xl font-bold text-center mt-10">My Tech Stack</h2>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <img src="your-photo.jpg" class="avatar">
+<!-- Programming Language -->
+<div class="section-title">Programming Language</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="42"></div>Python</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" width="42"></div>NumPy</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" width="42"></div>Pandas</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" width="42"></div>SciPy</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scikitlearn/scikitlearn-original.svg" width="42"></div>Scikit</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg" width="42"></div>PySpark</div>
+</div>
 
-    <div class="name">Priyanka De</div>
-    <div class="username">Data Analyst</div>
+<!-- Visualization -->
+<div class="section-title">Visualizations</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg" width="42"></div>Matplotlib</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" width="42"></div>Seaborn</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/plotly/plotly-original.svg" width="42"></div>Plotly</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" width="42"></div>Power BI</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" width="42"></div>Tableau</div>
+</div>
 
-    <div class="bio">
-      Transforming raw data into business intelligence using Python,
-      SQL, and Power BI. Passionate about scalable analytics & cloud pipelines.
-    </div>
+<!-- Web Scraping -->
+<div class="section-title">Web Scraping & Connectors</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="42"></div>Requests</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/10656282?s=200&v=4" width="42"></div>BeautifulSoup</div>
+<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="42"></div>SQLAlchemy</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/4168482?s=200&v=4" width="42"></div>OpenPyXL</div>
+</div>
 
-    <button class="btn">Contact Me</button>
+<!-- Databases -->
+<div class="section-title">Databases & Query</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
+<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg" width="42"></div>MSSQL</div>
+<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="42"></div>MySQL</div>
+</div>
 
-    <div class="info">
-      👥 Followers: 0<br>
-      🏢 Unified Mentor Pvt Ltd<br>
-      📧 dataexplorepriyanka@gmail.com
-    </div>
-  </div>
+<!-- Cloud -->
+<div class="section-title">Cloud Platforms</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
+<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="42"></div>AWS</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" width="42"></div>Azure</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/4998052?s=200&v=4" width="42"></div>Databricks</div>
+</div>
 
-  <!-- Main -->
-  <div class="content">
+<!-- Tools -->
+<div class="section-title">Other Tools</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="42"></div>Git</div>
+<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="42"></div>GitHub</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" width="42"></div>Linux</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://cdn.worldvectorlogo.com/logos/microsoft-excel-2013.svg" width="42"></div>Excel</div>
+</div>
 
-    <div class="hero">
-      <h1>Hi 👋 I'm Priyanka</h1>
-      <p>Full Stack Data Analyst • SQL • Python • AWS • BI</p>
-    </div>
-
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I specialize in transforming complex datasets into strategic insights.
-        My focus spans analytics, data engineering, dashboard storytelling,
-        and machine learning driven decision systems.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Work Showcase</h2>
-
-      <div class="grid">
-        <div class="card"><img src="img1.png"></div>
-        <div class="card"><img src="img2.png"></div>
-        <div class="card"><img src="img3.png"></div>
-      </div>
-    </div>
-
-  </div>
+<!-- Learning -->
+<div class="section-title">Learning Tools</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center mb-20">
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" width="42"></div>PyTorch</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/39938107?s=200&v=4" width="42"></div>MLflow</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/45109972?s=200&v=4" width="42"></div>Streamlit</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" width="42"></div>TensorFlow</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/keras/keras-original.svg" width="42"></div>Keras</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/25720743?s=200&v=4" width="42"></div>HuggingFace</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/126733545?s=200&v=4" width="42"></div>LangChain</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/126733545?s=200&v=4" width="42"></div>LangGraph</div>
+<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg" width="42"></div>Selenium</div>
 </div>
 
 </body>
