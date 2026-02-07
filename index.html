@@ -12,6 +12,29 @@
 <style>
 body{font-family:'Poppins',sans-serif;}
 
+/* Aesthetic Highlight Box */
+.highlight-box{
+background: linear-gradient(
+  145deg,
+  rgba(255,255,255,0.05),
+  rgba(168,85,247,0.15)
+);
+
+border: 1px solid rgba(255,255,255,0.15);
+border-radius: 18px;
+
+padding: 30px 18px 35px;
+margin: 40px auto;
+
+box-shadow:
+  0 8px 30px rgba(0,0,0,0.35),
+  inset 0 0 25px rgba(255,255,255,0.04);
+
+backdrop-filter: blur(12px);
+max-width: 1200px;
+}
+
+
 .tech-btn{
 background: rgba(20,20,35,0.85);
 border:1px solid rgba(255,255,255,0.25);
@@ -53,8 +76,14 @@ text-align:center
 <h2 class="text-4xl font-bold text-center mt-10">My Tech Stack</h2>
 <br><br>
 <!-- Programming -->
-<div class="section-title">Programming Language</div>
+<div class="highlight-box">
+
+<div style="text-align:center;">
+  <div class="section-title">Programming Language</div>
+</div>
+
 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 justify-items-center">
+
 
 <div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="48"></div>Python</div>
 
@@ -112,7 +141,7 @@ text-align:center
 
 <!-- Cloud & DB -->
 <div class="section-title">Databases & Cloud Services</div>
-<div class="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-8 justify-items-center">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 justify-items-center">
 
 <div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="48"></div>MySQL</div>
 
