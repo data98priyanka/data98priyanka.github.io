@@ -77,7 +77,7 @@ background:#10b981;
 
 <div class="flex items-center gap-3 text-xl font-bold text-purple-400">
 <div class="w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-blue-400"></div>
-PriyankaFolio
+Priyanka Portfolio
 </div>
 
 <!-- Menu -->
@@ -123,13 +123,71 @@ Priyanka De
 </h2>
 
 <p class="text-xl mb-4">
-I am a <span class="text-cyan-400 font-semibold">Full Stack Data Analyst</span>
+  I am a 
+  <span id="typed-role" class="text-cyan-400 font-semibold"></span>
+  <span class="border-r-2 border-cyan-400 ml-1 animate-pulse"></span>
 </p>
+<script>
+const roles = [
+  "Full Stack Data Analyst",
+  "ML Engineer",
+  "Data Scientist",
+  "Business Analyst"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typedText = document.getElementById("typed-role");
+
+function typeEffect() {
+
+  const currentRole = roles[roleIndex];
+
+  if (!deleting) {
+    typedText.textContent = currentRole.substring(0, charIndex++);
+    
+    if (charIndex > currentRole.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+  } else {
+    typedText.textContent = currentRole.substring(0, charIndex--);
+    
+    if (charIndex === 0) {
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 40 : 80);
+}
+
+typeEffect();
+</script>
 
 
-<h2>
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&size=22&pause=1500&color=2F80ED&center=true&vCenter=true&width=800&lines=Full+Stack+Data+Analyst;SQL+%7C+Python+%7C+Power+BI+%7C+AWS;Data+Engineering+%2B+Analytics+%2B+Business+Storytelling;Turning+data+into+decision-ready+insights" />
-</h2>
+
+<h1 align="center">
+
+<img src="https://readme-typing-svg.demolab.com
+?font=Poppins
+&weight=700
+&size=36
+&pause=1500
+&color=00F5D4
+&center=true
+&vCenter=true
+&width=1000
+&lines=Full+Stack+Data+Analyst;
+SQL+%7C+Python+%7C+Power+BI+%7C+AWS;
+Data+Engineering+%2B+Analytics+%2B+Business+Storytelling;
+Turning+data+into+decision-ready+insights" />
+
+</h1>
+
 
   
 <p class="text-gray-300 mb-6">
