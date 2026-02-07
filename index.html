@@ -8,6 +8,165 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Priyanka Daye</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{font-family:'Poppins',sans-serif;background:#0f172a;color:white}
+
+/* Floating particles */
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* Avatar glow */
+.avatar{
+width:260px;
+height:260px;
+border-radius:50%;
+overflow:hidden;
+box-shadow:
+0 0 40px rgba(0,255,255,.6),
+0 0 80px rgba(168,85,247,.4);
+}
+
+/* Button styling */
+.btn{
+padding:12px 26px;
+border-radius:10px;
+font-weight:600;
+transition:.25s;
+}
+
+.btn-main{
+background:linear-gradient(135deg,#5f2cff,#a855f7);
+}
+.btn-main:hover{transform:translateY(-3px)}
+
+.btn-outline{
+border:1px solid #a855f7;
+}
+.btn-outline:hover{
+background:#a855f7;
+}
+
+.btn-green{
+background:#10b981;
+}
+.btn-green:hover{transform:translateY(-3px)}
+</style>
+
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<!-- HERO SECTION -->
+
+<section class="min-h-screen flex items-center px-10">
+
+<div class="grid md:grid-cols-2 items-center gap-12 max-w-6xl mx-auto">
+
+<!-- LEFT TEXT -->
+
+<div>
+<h1 class="text-5xl font-bold mb-4">
+Hello, I'm
+</h1>
+
+<h2 class="text-4xl font-semibold text-purple-400 mb-4">
+Priyanka Daye
+</h2>
+
+<p class="text-xl mb-4">
+I am a <span class="text-cyan-400 font-semibold">Full Stack Data Analyst</span>
+</p>
+
+<p class="text-gray-300 mb-6">
+Transforming complex data into actionable insights and innovative business solutions through analytics, dashboards, and machine learning.
+</p>
+
+<div class="flex gap-4 flex-wrap">
+
+<a href="#projects" class="btn btn-main">View My Work →</a>
+
+<a href="mailto:pdecloud98@gmail.com" class="btn btn-outline">
+Contact Me
+</a>
+
+<a href="#" class="btn btn-green">
+Download CV
+</a>
+
+</div>
+</div>
+
+<!-- RIGHT IMAGE -->
+
+<div class="flex justify-center">
+<div class="avatar">
+<img src="pic/67.png" style="width:100%;height:100%;object-fit:cover;">
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PARTICLE SCRIPT -->
+
+<script>
+const canvas=document.getElementById('particles');
+const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let dots=[];
+for(let i=0;i<80;i++){
+dots.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2,
+vx:(Math.random()-0.5)*0.5,
+vy:(Math.random()-0.5)*0.5
+});
+}
+
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+dots.forEach(d=>{
+d.x+=d.vx;
+d.y+=d.vy;
+if(d.x<0||d.x>canvas.width)d.vx*=-1;
+if(d.y<0||d.y>canvas.height)d.vy*=-1;
+ctx.beginPath();
+ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+ctx.fillStyle="rgba(255,255,255,0.5)";
+ctx.fill();
+});
+requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
+
+
 
 <style>
 body{font-family:'Poppins',sans-serif;}
