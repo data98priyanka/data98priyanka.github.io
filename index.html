@@ -1,112 +1,196 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Priyanka Daye | Full Stack Data Analyst</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-body{font-family:'Poppins',sans-serif;}
+body{font-family:Poppins,sans-serif}
 
-/* SQUARE TILE */
-.tech-btn{
-  background: rgba(20,20,35,0.85);
-  border:1px solid rgba(255,255,255,0.25);
-  border-radius:16px;
-  width:140px;
-  height:140px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  font-weight:600;
-  text-align:center;
-  transition:0.3s;
+/* floating hero animation */
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0)}
 }
-.tech-btn:hover{transform:scale(1.12);background:rgba(60,40,120,0.9)}
+.float{animation:float 5s ease-in-out infinite}
 
-.logo-wrap{width:60px;height:60px;display:flex;align-items:center;justify-content:center}
-.logo-box{background:white;border-radius:10px;padding:6px}
-.section-title{font-size:1.6rem;font-weight:700;margin:40px 0 20px;text-align:center}
+/* contact buttons */
+.btn{
+background:#ff4da6;
+padding:10px 18px;
+border-radius:12px;
+font-weight:600;
+transition:.3s;
+}
+.btn:hover{background:#ff2f93}
+
+/* tech tiles */
+.tech{
+background:rgba(20,20,35,.9);
+width:120px;
+height:120px;
+border-radius:14px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+font-size:12px;
+font-weight:600;
+transition:.25s;
+}
+.tech:hover{
+transform:scale(1.12);
+background:rgba(70,40,150,.9);
+}
+.white{background:white;padding:5px;border-radius:8px}
+.section-title{font-size:1.4rem;font-weight:700;margin-bottom:12px}
+.grid-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 </style>
+
 </head>
 
 <body class="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
 
+<!-- NAV / CONTACT -->
+
+<nav class="flex flex-wrap justify-between items-center px-8 py-5">
+<h1 class="text-2xl font-bold">Priyanka Daye</h1>
+
+<div class="flex gap-3 flex-wrap">
+<a class="btn" href="tel:+917063257272">📞 Call</a>
+
+<a class="btn"
+href="https://wa.me/917063257272?text=Hi Priyanka — I saw your portfolio and want to connect regarding analytics opportunities">
+WhatsApp</a>
+
+<a class="btn"
+href="mailto:pdecloud98@gmail.com,dataexplorepriyanka@gmail.com?subject=Connection regarding Data Analytics opportunity&body=Hi Priyanka,%0D%0AI would like to connect regarding:%0D%0A- Project collaboration%0D%0A- Hiring opportunity%0D%0A- Analytics consultation">
+Email</a>
+
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="flex flex-col md:flex-row items-center px-10 py-16">
+
+<div class="md:w-1/2">
+<h2 class="text-5xl font-bold mb-6">
+Full Stack Data Analyst
+</h2>
+
+<p class="text-gray-300 text-lg">
+Transforming complex business data into strategic insights through analytics, machine learning, and dashboard storytelling.
+</p>
+</div>
+
+<div class="md:w-1/2 flex justify-center gap-6 mt-8 md:mt-0">
+
+<img class="float w-40"
+src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png">
+
+<img class="float w-40"
+src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png">
+
+<img class="float w-40"
+src="https://cdn-icons-png.flaticon.com/512/4140/4140061.png">
+
+</div>
+</section>
+
 <!-- ================= TECH STACK ================= -->
-<h2 class="text-4xl font-bold text-center mt-10">My Tech Stack</h2>
 
-<!-- Programming Language -->
+<h1 class="text-3xl font-bold text-center mb-12">My Tech Stack</h1>
+
+<div class="grid md:grid-cols-2 gap-12 px-8">
+
+<!-- Programming -->
+
+<div>
 <div class="section-title">Programming Language</div>
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="42"></div>Python</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" width="42"></div>NumPy</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" width="42"></div>Pandas</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" width="42"></div>SciPy</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scikitlearn/scikitlearn-original.svg" width="42"></div>Scikit</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg" width="42"></div>PySpark</div>
+<div class="grid-tools">
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="28">Python</div>
+<div class="tech"><div class="white"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" width="28"></div>Pandas</div>
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" width="28">NumPy</div>
+<div class="tech"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" width="28">SciPy</div>
+<div class="tech"><div class="white"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scikitlearn/scikitlearn-original.svg" width="28"></div>SkLearn</div>
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg" width="28">PySpark</div>
+</div>
 </div>
 
-<!-- Visualization -->
+<!-- Visual -->
+
+<div>
 <div class="section-title">Visualizations</div>
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg" width="42"></div>Matplotlib</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" width="42"></div>Seaborn</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/plotly/plotly-original.svg" width="42"></div>Plotly</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" width="42"></div>Power BI</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" width="42"></div>Tableau</div>
+<div class="grid-tools">
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg" width="28">Matplotlib</div>
+<div class="tech"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" width="28">Seaborn</div>
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/plotly/plotly-original.svg" width="28">Plotly</div>
+<div class="tech"><img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" width="28">PowerBI</div>
+<div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" width="28">Tableau</div>
 </div>
-
-<!-- Web Scraping -->
-<div class="section-title">Web Scraping & Connectors</div>
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="42"></div>Requests</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/10656282?s=200&v=4" width="42"></div>BeautifulSoup</div>
-<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="42"></div>SQLAlchemy</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/4168482?s=200&v=4" width="42"></div>OpenPyXL</div>
 </div>
 
 <!-- Databases -->
-<div class="section-title">Databases & Query</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg" width="42"></div>MSSQL</div>
-<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="42"></div>MySQL</div>
+
+<div>
+<div class="section-title">Databases</div>
+<div class="grid-tools">
+<div class="tech"><div class="white"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg" width="28"></div>MSSQL</div>
+<div class="tech"><div class="white"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="28"></div>MySQL</div>
+</div>
+</div>
+
+<!-- Web -->
+
+<div>
+<div class="section-title">Web Scraping & Connectors</div>
+<div class="grid-tools">
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="28">Requests</div>
+<div class="tech"><img src="https://avatars.githubusercontent.com/u/10656282?s=200&v=4" width="28">BS4</div>
+<div class="tech"><div class="white"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="28"></div>SQL</div>
+<div class="tech"><img src="https://avatars.githubusercontent.com/u/4168482?s=200&v=4" width="28">OpenPyXL</div>
+</div>
 </div>
 
 <!-- Cloud -->
+
+<div>
 <div class="section-title">Cloud Platforms</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="42"></div>AWS</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" width="42"></div>Azure</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/4998052?s=200&v=4" width="42"></div>Databricks</div>
+<div class="grid-tools">
+<div class="tech"><div class="white"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="28"></div>AWS</div>
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" width="28">Azure</div>
+<div class="tech"><img src="https://avatars.githubusercontent.com/u/4998052?s=200&v=4" width="28">Databricks</div>
+</div>
 </div>
 
 <!-- Tools -->
+
+<div>
 <div class="section-title">Other Tools</div>
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="42"></div>Git</div>
-<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="42"></div>GitHub</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" width="42"></div>Linux</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://cdn.worldvectorlogo.com/logos/microsoft-excel-2013.svg" width="42"></div>Excel</div>
+<div class="grid-tools">
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="28">Git</div>
+<div class="tech"><div class="white"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="28"></div>GitHub</div>
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" width="28">Linux</div>
+<div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/microsoft-excel-2013.svg" width="28">Excel</div>
+</div>
+</div>
+
 </div>
 
 <!-- Learning -->
-<div class="section-title">Learning Tools</div>
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center mb-20">
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" width="42"></div>PyTorch</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/39938107?s=200&v=4" width="42"></div>MLflow</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/45109972?s=200&v=4" width="42"></div>Streamlit</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" width="42"></div>TensorFlow</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/keras/keras-original.svg" width="42"></div>Keras</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/25720743?s=200&v=4" width="42"></div>HuggingFace</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/126733545?s=200&v=4" width="42"></div>LangChain</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://avatars.githubusercontent.com/u/126733545?s=200&v=4" width="42"></div>LangGraph</div>
-<div class="tech-btn"><div class="logo-wrap"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg" width="42"></div>Selenium</div>
-</div>
 
-</body>
-</html>
+<div class="mt-12 text-center">
+<div class="section-title">Learning Tools</div>
+<div class="flex flex-wrap justify-center gap-4 px-8 pb-20">
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" width="28">PyTorch</div>
+<div class="tech"><div class="white"><img src="https://avatars.githubusercontent.com/u/39938107?s=200&v=4" width="28"></div>MLflow</div>
+<div class="tech"><img src="https://avatars.githubusercontent.com/u/45109972?s=200&v=4" width="28">Streamlit</div>
+<div class="tech"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" width="28">TensorFlow</div>
+<div class=
