@@ -101,6 +101,35 @@ PriyankaFolio
 </div>
 </nav>
 
+/* Project Button */
+.project-btn{
+display:flex;
+align-items:center;
+gap:14px;
+
+background:linear-gradient(135deg,#5f2cff,#a855f7);
+padding:14px 22px;
+
+border-radius:14px;
+font-weight:600;
+font-size:16px;
+color:white;
+
+box-shadow:0 6px 18px rgba(0,0,0,.35);
+transition:.25s;
+}
+
+.project-btn:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 12px 25px rgba(0,0,0,.45);
+}
+
+.proj-logo{
+width:34px;
+height:34px;
+}
+
+
 
 <!-- HERO SECTION -->
 
@@ -255,6 +284,32 @@ text-align:center
 .grid{gap:14px !important;}
 </style>
 </head>
+
+<section id="portfolio" class="mt-24 px-10">
+
+<h2 class="text-3xl font-bold mb-6">
+Projects
+</h2>
+
+<!-- Put Button Here -->
+<a href="YOUR_PROJECT_LINK"
+target="_blank"
+class="project-btn">
+
+```
+<img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" 
+     alt="FMCG Logo"
+     class="proj-logo">
+
+<span>FMCG Analytics</span>
+```
+
+</a>
+
+
+</section>
+
+
 
 <body class="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
 
