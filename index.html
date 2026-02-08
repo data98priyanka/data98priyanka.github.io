@@ -60,6 +60,73 @@ background:#10b981;
 }
 .btn-green:hover{transform:translateY(-3px)}
 
+.projects-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); /* ⭐ KEY LINE */
+    gap:30px;
+    padding:40px;
+}
+
+/* CARD STYLE */
+.project-box{
+    background:#f4f5f7;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-box img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h3{
+    color:#e6007e;
+}
+
+/* TAGS */
+.tags span{
+    background:#cfe0ff;
+    padding:6px 12px;
+    border-radius:15px;
+    margin:3px;
+    display:inline-block;
+    font-size:12px;
+}
+
+/* TECH COLORS */
+.tech span{
+    padding:6px 12px;
+    border-radius:15px;
+    margin:3px;
+    display:inline-block;
+}
+
+.sql{background:#ffe08a;}
+.py{background:#b9f2c2;}
+.aws{background:#ffc98b;}
+.pbi{background:#d8b6ff;}
+
+/* BUTTONS */
+.btns{
+    display:flex;
+    gap:10px;
+    margin-top:12px;
+}
+
+.btns a{
+    flex:1;
+    background:#0f172a;
+    color:white;
+    padding:10px;
+    text-align:center;
+    border-radius:10px;
+}
 
 
 </style>
@@ -434,56 +501,92 @@ text-align:center
 
 </div>
 
-<section class="pro-section">
+<section class="projects-area">
 
-<div class="pro-grid">
+<div class="projects-grid">
 
-  <!-- CARD -->
-  <div class="pro-card">
+  <!-- CARD 1 -->
+  <div class="project-box">
+    <img src="images/dash1.jpg">
 
-    <img src="images/dashboard1.jpg" class="pro-img">
-
-    <div class="pro-body">
-
+    <div class="content">
       <h3>Product & Market Performance Analysis</h3>
 
       <p>
         Product and marketing performance evaluation using dashboards,
-        growth insights, and strategic storytelling.
+        growth insights and storytelling.
       </p>
 
-      <!-- BLUE TAGS -->
-      <div class="pro-tags">
+      <div class="tags">
         <span>Dashboarding</span>
         <span>Marketing Growth</span>
-        <span>FMCG Insights</span>
+        <span>FMCG</span>
         <span>Storytelling</span>
         <span>B2C</span>
-        <span>Product Analyst</span>
         <span>AWS</span>
-        <span>ETL Pipeline</span>
       </div>
 
-      <!-- COLORED TECH TAGS -->
-      <div class="tech-tags">
+      <div class="tech">
         <span class="sql">SQL</span>
         <span class="py">Python</span>
         <span class="aws">AWS</span>
         <span class="pbi">Power BI</span>
       </div>
 
-      <!-- BUTTONS -->
-      <div class="pro-btns">
-        <a href="#" class="btn-view">View Project</a>
-        <a href="#" class="btn-git">GitHub</a>
+      <div class="btns">
+        <a href="#">View Project</a>
+        <a href="#">GitHub</a>
       </div>
-
     </div>
   </div>
 
 
-  <!-- DUPLICATE THIS CARD FOR MORE PROJECTS -->
-  <!-- Just copy & paste above block -->
+  <!-- CARD 2 -->
+  <div class="project-box">
+    <img src="images/dash2.jpg">
+    <div class="content">
+      <h3>Marketing ROI Analytics</h3>
+      <p>Campaign tracking and funnel optimization insights.</p>
+
+      <div class="tags">
+        <span>CRM</span><span>Segmentation</span><span>Analytics</span>
+      </div>
+
+      <div class="tech">
+        <span class="sql">SQL</span>
+        <span class="py">Python</span>
+      </div>
+
+      <div class="btns">
+        <a href="#">View Project</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CARD 3 -->
+  <div class="project-box">
+    <img src="images/dash3.jpg">
+    <div class="content">
+      <h3>Customer Segmentation</h3>
+      <p>Behavior-based clustering for targeting strategy.</p>
+
+      <div class="tags">
+        <span>Clustering</span><span>B2C</span>
+      </div>
+
+      <div class="tech">
+        <span class="py">Python</span>
+        <span class="pbi">Power BI</span>
+      </div>
+
+      <div class="btns">
+        <a href="#">View Project</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
 
 </div>
 </section>
