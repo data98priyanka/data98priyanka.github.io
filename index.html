@@ -432,6 +432,112 @@ text-align:center
 
 </div>
 
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function SanitaryAnalyticsSite() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  // 👉 Add as many projects as you want here
+  const projects = [
+    {
+      title: "Product & Market Performance Analysis",
+      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    },
+    {
+      title: "Marketing Growth Dashboard",
+      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    },
+    {
+      title: "Customer Segmentation Analytics",
+      img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen p-8">
+
+      {/* Header */}
+      <header className="mb-10 text-center">
+        <h1 className="text-4xl font-bold text-pink-600">
+          FMCG Product & Market Analytics — Business Growth Dashboard & Insights
+        </h1>
+      </header>
+
+      {/* GRID — 3 PER ROW */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        {projects.map((project, i) => (
+          <motion.div key={i} whileHover={{ scale: 1.04 }}>
+
+            <Card className="rounded-2xl shadow-xl overflow-hidden h-full">
+
+              {/* IMAGE — constrained to box */}
+              <img
+                src={`${project.img}?q=80&w=800&auto=format&fit=crop`}
+                alt="project"
+                className="w-full h-52 object-cover"
+              />
+
+              <CardContent className="p-6 flex flex-col justify-between h-full">
+
+                <h2 className="text-xl font-semibold text-pink-600">
+                  {project.title}
+                </h2>
+
+                {/* Buttons */}
+                <div className="mt-6 flex gap-3">
+                  <Button
+                    className="w-full"
+                    onClick={() => setOpenIndex(i)}
+                  >
+                    View Project
+                  </Button>
+
+                  <Button
+                    className="w-full"
+                    onClick={() => window.open("https://github.com/YOUR_LINK")}
+                  >
+                    GitHub
+                  </Button>
+                </div>
+
+              </CardContent>
+            </Card>
+
+          </motion.div>
+        ))}
+
+      </div>
+
+      {/* Modal */}
+      {openIndex !== null && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="bg-white rounded-2xl shadow-2xl max-w-xl w-full p-8"
+          >
+            <h2 className="text-2xl font-bold text-pink-600 mb-4">
+              Project Overview
+            </h2>
+
+            <p>
+              Detailed analytics description for project #{openIndex + 1}
+            </p>
+
+            <Button className="mt-6 w-full" onClick={() => setOpenIndex(null)}>
+              Close
+            </Button>
+          </motion.div>
+        </div>
+      )}
+
+    </div>
+  );
+}
 
 
 
