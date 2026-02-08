@@ -59,6 +59,80 @@ background:#a855f7;
 background:#10b981;
 }
 .btn-green:hover{transform:translateY(-3px)}
+
+.projects-section{
+    padding:80px 40px;
+}
+
+.section-title{
+    font-size:32px;
+    margin-bottom:30px;
+    text-align:left;
+}
+
+/* GRID LAYOUT */
+.projects-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.project-card{
+    background:#1f1f2e;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGE */
+.project-img{
+    width:100%;
+    border-radius:12px;
+}
+
+/* TAGS */
+.tags span{
+    background:#3c3cff;
+    padding:5px 10px;
+    border-radius:8px;
+    margin:4px;
+    display:inline-block;
+    font-size:12px;
+}
+
+/* COLORED TECH TAGS */
+.sql{background:#FFD54F;padding:5px 10px;border-radius:8px;}
+.python{background:#81C784;padding:5px 10px;border-radius:8px;}
+.aws{background:#FFB74D;padding:5px 10px;border-radius:8px;}
+.powerbi{background:#BA68C8;padding:5px 10px;border-radius:8px;}
+
+/* BUTTONS */
+.btn-row{
+    margin-top:15px;
+    display:flex;
+    gap:10px;
+}
+
+.view-btn{
+    background:#5a4bff;
+    padding:8px 16px;
+    border-radius:8px;
+    color:white;
+}
+
+.git-btn{
+    background:#24292e;
+    padding:8px 16px;
+    border-radius:8px;
+    color:white;
+}
+
 </style>
 
 </head>
@@ -316,6 +390,57 @@ text-align:center
 
 <body class="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
 
+<section id="projects" class="projects-section">
+
+  <h2 class="section-title">My Projects</h2>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT CARD -->
+    <div class="project-card">
+
+      <img src="pic/1.png" class="project-img">
+
+      <h3>Product & Market Performance Analysis</h3>
+
+      <p>
+        FMCG Product & Market Analytics — Business Growth Dashboard & Insights.
+        Storytelling-driven dashboard analytics using AWS ETL pipelines.
+      </p>
+
+      <!-- TAGS -->
+      <div class="tags">
+        <span class="tag">Storytelling</span>
+        <span class="tag">B2C</span>
+        <span class="tag">Product Analyst</span>
+        <span class="tag">AWS</span>
+        <span class="tag">ETL Pipeline</span>
+      </div>
+
+      <!-- TECH STACK COLORED -->
+      <div class="tech-tags">
+        <span class="sql">SQL</span>
+        <span class="python">Python</span>
+        <span class="aws">AWS</span>
+        <span class="powerbi">Power BI</span>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="btn-row">
+        <a href="#" class="view-btn">View Project</a>
+        <a href="https://github.com/YOUR_LINK" class="git-btn">GitHub</a>
+      </div>
+
+    </div>
+
+    <!-- DUPLICATE THIS BLOCK FOR MORE PROJECTS -->
+    <!-- Just copy project-card div 10–15 times -->
+    
+  </div>
+
+</section>
+
+
 <h2 class="text-4xl font-bold text-center mt-10">My Tech Stack</h2>
 <br><br>
 <!-- Programming -->
@@ -338,7 +463,7 @@ text-align:center
 
 <div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scikitlearn/scikitlearn-original.svg" width="48"></div>Scikit</div>
 
-<!-- <div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg" width="48"></div>PySpark</div> -->
+<div class="tech-btn"><div class="logo-wrap logo-box"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg" width="48"></div>PySpark</div>
 
 </div>
 
