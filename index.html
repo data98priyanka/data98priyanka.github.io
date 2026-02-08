@@ -60,79 +60,6 @@ background:#10b981;
 }
 .btn-green:hover{transform:translateY(-3px)}
 
-.project-grid{
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
-  gap:28px;
-  padding:40px;
-}
-
-/* CARD */
-.card{
-  background:white;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 10px 20px rgba(0,0,0,0.15);
-  transition:0.25s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-}
-
-/* IMAGE */
-.card-img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-/* BODY */
-.card-body{
-  padding:18px;
-}
-
-.card-body h3{
-  margin-bottom:10px;
-}
-
-.card-body p{
-  font-size:14px;
-  color:#555;
-}
-
-/* TAGS */
-.tags{
-  margin:12px 0;
-}
-
-.tags span{
-  background:#e8ecff;
-  padding:5px 10px;
-  border-radius:8px;
-  margin:3px;
-  font-size:12px;
-  display:inline-block;
-}
-
-/* BUTTONS */
-.btns{
-  display:flex;
-  gap:10px;
-}
-
-.github{
-  background:#eee;
-  padding:8px 16px;
-  border-radius:8px;
-}
-
-.details{
-  background:#14b8a6;
-  color:white;
-  padding:8px 16px;
-  border-radius:8px;
-}
 
 
 </style>
@@ -507,95 +434,60 @@ text-align:center
 
 </div>
 
-<section class="project-section">
+<section class="pro-section">
 
-<div class="project-grid">
+<div class="pro-grid">
 
-  <!-- CARD 1 -->
-  <div class="card">
+  <!-- CARD -->
+  <div class="pro-card">
 
-    <img src="images/paypal.jpg" class="card-img">
+    <img src="images/dashboard1.jpg" class="pro-img">
 
-    <div class="card-body">
-      <h3>PayPal Product Dissection</h3>
+    <div class="pro-body">
 
-      <p>
-        Built a scalable SQL schema and ER model for PayPal
-        with entities like Users, Transactions & Disputes.
-      </p>
-
-      <div class="tags">
-        <span>SQL</span>
-        <span>MySQL Workbench</span>
-        <span>Python</span>
-      </div>
-
-      <div class="btns">
-        <a href="#" class="github">GitHub</a>
-        <a href="#" class="details">Details</a>
-      </div>
-    </div>
-
-  </div>
-
-
-  <!-- CARD 2 -->
-  <div class="card">
-
-    <img src="images/finance.jpg" class="card-img">
-
-    <div class="card-body">
-      <h3>Personal Finance Tracker</h3>
+      <h3>Product & Market Performance Analysis</h3>
 
       <p>
-        Tracked income, expenses and savings with Excel.
-        Dashboarding for budgeting & goal planning.
+        Product and marketing performance evaluation using dashboards,
+        growth insights, and strategic storytelling.
       </p>
 
-      <div class="tags">
-        <span>Excel</span>
-        <span>PivotTable</span>
-        <span>Dashboard</span>
-      </div>
-
-      <div class="btns">
-        <a href="#" class="github">GitHub</a>
-        <a href="#" class="details">Details</a>
-      </div>
-    </div>
-
-  </div>
-
-
-  <!-- CARD 3 -->
-  <div class="card">
-
-    <img src="images/hr.jpg" class="card-img">
-
-    <div class="card-body">
-      <h3>HR Diversity Dashboard</h3>
-
-      <p>
-        Power BI dashboard tracking workforce diversity,
-        promotions and turnover analytics.
-      </p>
-
-      <div class="tags">
-        <span>Power BI</span>
-        <span>DAX</span>
+      <!-- BLUE TAGS -->
+      <div class="pro-tags">
+        <span>Dashboarding</span>
+        <span>Marketing Growth</span>
+        <span>FMCG Insights</span>
         <span>Storytelling</span>
+        <span>B2C</span>
+        <span>Product Analyst</span>
+        <span>AWS</span>
+        <span>ETL Pipeline</span>
       </div>
 
-      <div class="btns">
-        <a href="#" class="github">GitHub</a>
-        <a href="#" class="details">Details</a>
+      <!-- COLORED TECH TAGS -->
+      <div class="tech-tags">
+        <span class="sql">SQL</span>
+        <span class="py">Python</span>
+        <span class="aws">AWS</span>
+        <span class="pbi">Power BI</span>
       </div>
+
+      <!-- BUTTONS -->
+      <div class="pro-btns">
+        <a href="#" class="btn-view">View Project</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+
     </div>
-
   </div>
+
+
+  <!-- DUPLICATE THIS CARD FOR MORE PROJECTS -->
+  <!-- Just copy & paste above block -->
 
 </div>
 </section>
+
 
 
 
