@@ -6,10 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<a href="/" class="logo">
-  <img src="pic/1_logo.png" alt="PD logo">
-  <span>Priyanka De - Portfolio</span>
-</a>
+
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -196,15 +193,21 @@ background:#10b981;
   gap: 10px;
   font-size: 20px;
   font-weight: 600;
-  color: #1f2937; /* dark professional color */
+  color: white;
   text-decoration: none;
 }
 
 .logo img {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
+
+.logo:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
 
 </style>
 
@@ -222,10 +225,10 @@ background:#10b981;
 
 <!-- Logo -->
 
-<div class="flex items-center gap-3 text-xl font-bold text-purple-400">
-<div class="w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-blue-400"></div>
-Priyanka Portfolio
-</div>
+<a href="#" class="logo">
+  <img src="pic/1_logo.png" alt="PD logo">
+  <span>Priyanka De <span style="color:#a855f7;">- Portfolio</span></span>
+</a>
 
 <!-- Menu -->
 
