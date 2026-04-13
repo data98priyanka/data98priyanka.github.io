@@ -220,7 +220,20 @@ background:#10b981;
   transform: scale(1.05);
   transition: 0.3s;
 }
+.navbar-glass{
+  background: rgba(255, 255, 255, 0.6);   /* soft white */
+  backdrop-filter: blur(12px);            /* glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
 
+.logo-text{
+  color: white;
+  font-weight: 700;
+
+  /* makes white visible on light bg */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
 
 </style>
 
@@ -232,7 +245,7 @@ background:#10b981;
 
 <!-- NAVBAR -->
 
-<nav class="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-md shadow-md">
+<nav class="fixed top-0 left-0 w-full z-50 navbar-glass">
 
 <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
 
@@ -240,7 +253,7 @@ background:#10b981;
 
 <a href="#" class="logo">
   <img src="pic/2_logo.png" alt="PD logo">
-  <span style="color:#a855f7;">Priyanka De - Portfolio</span>
+  <span class="logo-text">Priyanka De - Portfolio</span>
 </a>
 
 <!-- Menu -->
